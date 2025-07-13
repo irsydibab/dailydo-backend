@@ -19,3 +19,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/jadwals/{id}/start-timer', [JadwalController::class, 'startTimer']);
     Route::post('/jadwals/{id}/stop-timer', [JadwalController::class, 'stopTimer']);
 });
+
+Route::get('/ping', function () {
+    return response()->json(['message' => 'Laravel is working!']);
+});
